@@ -6,6 +6,9 @@ const cors = require('cors');
 const app = express();
 
 app.use(cors());
+app.use(() => {
+    res.header("Access-Control-Allow-Origin", "*");
+})
 // app.use(express.static("public"));
 // app.use('/scripts', express.static(__dirname + '/node_modules/'));
 
