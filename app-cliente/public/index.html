@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="webapp">
+
+<head>
+    <title>TECHPAR - Atividade 5</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <a href="#/list">LISTAR</a>
+    <a href="#/save">ADICIONAR</a>
+    <hr>
+    <div ng-view></div>
+
+    <!--CDN's-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.min.js"></script>-->
+
+    <!--Angular and Router configs-->
+    <script src="angular.module.js"></script>
+    <script src="router.config.js"></script>
+
+    <!--Controllers and Services-->
+    <script src="toList.controller.js"></script>
+    <script src="toSave.controller.js"></script>
+    <script src="http.service.js"></script>
+</body>
+
+</html>
