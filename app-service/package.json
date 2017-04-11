@@ -1,7 +1,7 @@
 {
-  "name": "techpar-atividade-05",
+  "name": "techpar-atividade-06",
   "version": "1.0.0",
-  "description": "Atividade 5",
+  "description": "Atividade 6",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon ."
@@ -10,7 +10,8 @@
     "javascript",
     "nodejs",
     "express",
-    "knex"
+    "knex",
+    "cors"
   ],
   "author": "raphael4ndrade",
   "license": "ISC",

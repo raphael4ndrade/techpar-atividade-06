@@ -6,16 +6,12 @@ const cors = require('cors');
 const app = express();
 
 app.use(cors());
-app.use(() => {
-    res.header("Access-Control-Allow-Origin", "*");
-})
-// app.use(express.static("public"));
-// app.use('/scripts', express.static(__dirname + '/node_modules/'));
-
 app.use(bodyParser.json());
 
 app.get('/list', (req, res) => {
-    knex("pessoa").select().then((ret) => res.send(ret).status(200));
+    knex("pessoa").select().then((ret) => {
+        res.send(ret).status(204);
+    })
 });
 
 app.post('/save', (req, res) => {
@@ -23,7 +19,7 @@ app.post('/save', (req, res) => {
     knex("pessoa").insert(pessoa, 'id_pessoa')
         .then((ret) => {
             pessoa.id_pessoa = ret[0];
-            res.send(pessoa).status(200);
+            res.send(pessoa).status(204);
         }).catch((err) => {
             console.log(err);
             res.send().status(500);
