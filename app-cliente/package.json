@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "http-server ./public -p 8080 --cors Access-Control-Allow-Origin"
+    "dev": "http-server ./public -p 8080 --cors Access-Control-Allow-Origin -o"
   },
   "author": "raphel4ndrade",
   "license": "ISC",
