@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "http-server ./public -p 1314 --cors "
+    "dev": "http-server ./public -p 3001 --cors "
   },
   "author": "raphel4ndrade",
   "license": "ISC",
