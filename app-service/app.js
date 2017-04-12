@@ -5,10 +5,21 @@ const cors = require('cors');
 
 const app = express();
 
-app.use(cors());
+// pre-flight for cors
+app.options('*', cors());
+// app.use((req, res, next) => {
+//   res.header('Access-Control-Allow-Origin', '*');
+//   res.header("Access-Control-Allow-Headers",
+//           "Content-Type, Content-Length, Range, Content-Range, Accept-Ranges, If-None-Match, Access-Control-Allow-Headers, Authorization, X-Requested-With, X-My-Custom-Header, X-Filename");
+//   res.header("Access-Control-Expose-Headers",
+//           "Content-Type, Content-Length, Range, Content-Range, Accept-Ranges, If-None-Match, Access-Control-Allow-Headers, Authorization, X-Requested-With, X-My-Custom-Header, X-Filename");
+//   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, HEAD');
+//   next();
+// });
+
 app.use(bodyParser.json());
 
-app.get('/list', (req, res) => {
+app.get('/list', cors(), (req, res) => {
     knex("pessoa").select().then((ret) => {
         res.send(ret).status(204);
     })
