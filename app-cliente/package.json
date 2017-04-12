@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "http-server ./public -p 8080 --cors Access-Control-Allow-Origin -o"
+    "dev": "http-server ./public -p 1314 --cors "
   },
   "author": "raphel4ndrade",
   "license": "ISC",
   "dependencies": {
-    "angular": "^1.6.4"
+    "angular": "^1.6.4",
+    "angular-route": "^1.6.4"
   },
   "devDependencies": {
     "http-server": "^0.9.0"
